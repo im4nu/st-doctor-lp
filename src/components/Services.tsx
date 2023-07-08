@@ -3,46 +3,46 @@ import {
   Mobile,
   MonitorMobbile,
   ReceiptItem,
-} from 'iconsax-react';
-import Image from 'next/image';
+} from "iconsax-react";
+import Image from "next/image";
 
 const Logos = [
-  { id: 0, url: '/images/partnerLogo/logo1.png', w: 250, h: 46 },
-  { id: 0, url: '/images/partnerLogo/logo1.png', w: 250, h: 46 },
-  { id: 1, url: '/images/partnerLogo/logo2.png', w: 100, h: 50 },
-  { id: 2, url: '/images/partnerLogo/logo3.png', w: 145, h: 30 },
-  { id: 3, url: '/images/partnerLogo/logo4.png', w: 120, h: 50 },
-  { id: 4, url: '/images/partnerLogo/logo5.png', w: 180, h: 45 },
+  { id: 0, url: "/images/partnerLogo/logo1.png", w: 250, h: 46 },
+  { id: 0, url: "/images/partnerLogo/logo1.png", w: 250, h: 46 },
+  { id: 1, url: "/images/partnerLogo/logo2.png", w: 100, h: 50 },
+  { id: 2, url: "/images/partnerLogo/logo3.png", w: 145, h: 30 },
+  { id: 3, url: "/images/partnerLogo/logo4.png", w: 120, h: 50 },
+  { id: 4, url: "/images/partnerLogo/logo5.png", w: 180, h: 45 },
 ];
 
 const ServicesData = [
   {
     id: 0,
     icon: <Mobile variant="TwoTone" size={32} />,
-    title: 'Prescrição Digital',
+    title: "Prescrição Digital",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
   },
   {
     id: 1,
     icon: <ReceiptItem variant="TwoTone" size={32} />,
-    title: 'Emissão de Nota Fiscal',
+    title: "Emissão de Nota Fiscal",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
   },
   {
     id: 2,
     icon: <DocumentText1 variant="TwoTone" size={32} />,
-    title: 'Formulários Dinâmicos',
+    title: "Formulários Dinâmicos",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
   },
   {
     id: 3,
     icon: <MonitorMobbile variant="TwoTone" size={32} />,
-    title: 'Aplicativo',
+    title: "Aplicativo",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function ServicesSection() {
               alt={`Logomarca ${item}`}
               width={item.w}
               height={item.h}
-              className={`flex min-w-${item.w} min-h-${item.h} slide`}
+              className={`flex slide`}
             />
           ))}
         </div>
@@ -91,7 +91,7 @@ export default function ServicesSection() {
 
       <div className="flex w-full">
         <Image
-          src={'/images/servicesHero.png'}
+          src={"/images/servicesHero.png"}
           alt="Mulher de jaleco com estetoscópio"
           width={360}
           height={540}

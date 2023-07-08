@@ -1,55 +1,55 @@
-'use client';
+"use client";
 
-import { ArrowLeft2, ArrowRight2 } from 'iconsax-react';
-import Image from 'next/image';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ContainedLink } from './Link';
+import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
+import Image from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ContainedLink } from "./Link";
 
 export const feedbackData = [
   {
     id: 0,
-    doctor: 'James Web',
-    clinic: 'Clínica de Ortopedia',
-    link: 'https://www.stdoctor.com.br',
-    atuationArea: 'Clínica de ortopedia',
-    image: '/images/feedback/1.png',
+    doctor: "James Web",
+    clinic: "Clínica de Ortopedia",
+    link: "https://www.stdoctor.com.br",
+    atuationArea: "Clínica de ortopedia",
+    image: "/images/feedback/1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
     id: 1,
-    doctor: 'Manu Rodrigues',
-    clinic: 'Clínica de Olhos do Cariri',
-    link: 'https://www.stdoctor.com.br',
-    atuationArea: 'Clínica de oftalmologia',
-    image: '/images/feedback/1.png',
+    doctor: "Manu Rodrigues",
+    clinic: "Clínica de Olhos do Cariri",
+    link: "https://www.stdoctor.com.br",
+    atuationArea: "Clínica de oftalmologia",
+    image: "/images/feedback/1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
     id: 2,
-    doctor: 'Rian Landim',
-    clinic: 'Clínirin',
-    link: 'https://www.stdoctor.com.br',
-    atuationArea: 'Clínica de Rins',
-    image: '/images/feedback/1.png',
+    doctor: "Rian Landim",
+    clinic: "Clínirin",
+    link: "https://www.stdoctor.com.br",
+    atuationArea: "Clínica de Rins",
+    image: "/images/feedback/1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
     id: 3,
-    doctor: 'Niko Robin',
-    clinic: 'Laboratório Costa',
-    link: 'https://www.stdoctor.com.br',
-    atuationArea: 'Laboratório de Análises Clínicas',
-    image: '/images/feedback/1.png',
+    doctor: "Niko Robin",
+    clinic: "Laboratório Costa",
+    link: "https://www.stdoctor.com.br",
+    atuationArea: "Laboratório de Análises Clínicas",
+    image: "/images/feedback/1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
     id: 4,
-    doctor: 'Petter Pan',
-    clinic: 'C.O.P Centro de ortopedia',
-    link: 'https://www.stdoctor.com.br',
-    atuationArea: 'Clínica de ortopedia',
-    image: '/images/feedback/1.png',
+    doctor: "Petter Pan",
+    clinic: "C.O.P Centro de ortopedia",
+    link: "https://www.stdoctor.com.br",
+    atuationArea: "Clínica de ortopedia",
+    image: "/images/feedback/1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
 ];
@@ -91,7 +91,7 @@ export default function FeedbackSection() {
         </h2>
         <p>
           Alguns dos nossos clientes estão aqui pra contar a experiência deles
-          com o nosso sistema{' '}
+          com o nosso sistema{" "}
         </p>
       </div>
 
@@ -109,7 +109,7 @@ export default function FeedbackSection() {
             className="flex flex-col w-[90%] gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
           >
             <p>{feedbackDataPosition.atuationArea}</p>
-            <h3 className="text-4xl font-semibold">
+            <h3 className="text-4xl font-semibold w-3/4">
               {feedbackDataPosition.clinic}
             </h3>
             <p>Saber mais</p>
@@ -123,7 +123,7 @@ export default function FeedbackSection() {
           <div className="flex flex-col w-[90%] bg-gradient-to-br from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3">
             <div className="flex flex-row -m-3 items-center w-full">
               <Image
-                src={'/images/feedbackProfissional1.png'}
+                src={"/images/feedbackProfissional1.png"}
                 alt="Imagem do comentarista"
                 width={175}
                 height={175}
@@ -154,7 +154,7 @@ export default function FeedbackSection() {
           <div
             key={item.id}
             className={`${
-              step === index ? 'bg-primary-100' : ''
+              step === index ? "bg-primary-100" : ""
             } flex rounded-full p-1 border border-primary-100 ease-linear duration-500`}
           />
         ))}
