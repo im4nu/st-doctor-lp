@@ -96,6 +96,7 @@ export default function ServicesSection() {
           width={360}
           height={540}
           className="lg:w-[487px] w-full lg:h-[600px] DropShadow"
+          quality={100}
         />
       </div>
     </section>

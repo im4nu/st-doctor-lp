@@ -1,11 +1,11 @@
-import { Verify } from 'iconsax-react';
-import Image from 'next/image';
+import { Verify } from "iconsax-react";
+import Image from "next/image";
 
 const HeroServicesData = [
-  { id: 0, label: 'Sistema + Aplicativo personalizados para a sua demanda' },
-  { id: 1, label: 'Interfaces intuitivas para clínicas e médicos' },
-  { id: 2, label: 'Contabilidade especializada no setor da saúde' },
-  { id: 3, label: 'Soluções financeiras personalizadas com B.I' },
+  { id: 0, label: "Sistema + Aplicativo personalizados para a sua demanda" },
+  { id: 1, label: "Interfaces intuitivas para clínicas e médicos" },
+  { id: 2, label: "Contabilidade especializada no setor da saúde" },
+  { id: 3, label: "Soluções financeiras personalizadas com B.I" },
 ];
 
 export default function HeroSection() {
@@ -38,11 +38,12 @@ export default function HeroSection() {
 
         <div className="flex w-full justify-end">
           <Image
-            src={'/images/hero.png'}
+            src={"/images/hero.png"}
             width={640}
-            height={640}
+            height={524}
             alt="Logomarca com imagens de médicos dentro"
             className="w-[290px] h-[350] lg:w-[524px] lg:h-[640px]]]"
+            quality={100}
           />
         </div>
       </section>
