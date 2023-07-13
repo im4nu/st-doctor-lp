@@ -7,6 +7,7 @@ import FeedbackSection from "~/components/Feedback";
 import { ArrowUp2, Whatsapp } from "iconsax-react";
 import LGPDBanner from "~/components/LGPD";
 import Footer from "~/components/Footer";
+import { Carousel } from "~/components/Carousel";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <LGPDBanner />
+      <Carousel />
       <ServicesSection />
       <SystemPreviewSection />
       <FeedbackSection />

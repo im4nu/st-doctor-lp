@@ -6,14 +6,6 @@ import {
 } from "iconsax-react";
 import Image from "next/image";
 
-const Logos = [
-  { id: 0, url: "/images/partnerLogo/logo1.png", w: 250, h: 46 },
-  { id: 1, url: "/images/partnerLogo/logo2.png", w: 100, h: 50 },
-  { id: 2, url: "/images/partnerLogo/logo3.png", w: 145, h: 30 },
-  { id: 3, url: "/images/partnerLogo/logo4.png", w: 120, h: 50 },
-  { id: 4, url: "/images/partnerLogo/logo5.png", w: 180, h: 45 },
-];
-
 const ServicesData = [
   {
     id: 0,
@@ -47,56 +39,56 @@ const ServicesData = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="flex flex-col min-h-screen h-full gap-8">
-      <div className="flex slider">
-        <div className="flex flex-row gap-12 items-center justify-center my-12 slide-track">
-          {Logos.map((item) => (
-            <Image
-              key={item.id}
-              src={item.url}
-              alt={`Logomarca ${item}`}
-              width={item.w}
-              height={item.h}
-              className={`flex slide`}
-            />
-          ))}
-        </div>
-      </div>
+    <section
+      id="services"
+      className="flex flex-col min-h-screen w-full items-center gap-8 lg:gap-12"
+    >
+      <h2 className="text-5xl px-8 max-w-md text-center font-bold text-black-100 lg:px-0 md:max-w-none">
+        Por que o <span> </span>
+        <span className="text-5xl font-bold StDoctorSpan">St Doctor?</span>
+      </h2>
 
-      <div className="flex text-center items-center justify-center w-full">
-        <h2 className="text-5xl font-bold text-black-100">
-          Por que o <span> </span>
-          <span className="text-5xl font-bold StDoctorSpan">St Doctor?</span>
-        </h2>
-      </div>
+      <div className="flex flex-col lg:items-center lg:flex-row-reverse lg:justify-evenly 2xl:justify-center">
+        <div className="flex flex-col gap-8 text-center px-8 max-w-md md:max-w-none md:items-center md:w-full lg:text-start lg:w-1/2 2xl:w-1/3">
+          <h2 className="hidden lg:flex text-4xl font-bold text-black-100">
+            Nossos <span> </span>
+            <span className="text-4xl px-2 font-bold StDoctorSpan">
+              Serviços
+            </span>
+          </h2>
 
-      <p className="text-center px-8">
-        Cuidamos da sua clínica com excelência para que seu foco seja voltado
-        para o que mais importa, a saúde dos seus pacientes.
-      </p>
+          <p>
+            Cuidamos da sua clínica com excelência para que seu foco seja
+            voltado para o que mais importa, a saúde dos seus pacientes.
+          </p>
 
-      <div className="flex flex-col gap-12 pl-8">
-        {ServicesData.map((item) => (
-          <div key={item.id} className="flex flex-col gap-2">
-            <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[70px] h-[70px] items-center justify-center rounded-lg">
-              {item.icon}
-            </div>
+          <div className="flex flex-col gap-12 pl-8 lg:flex-row lg:flex-wrap lg:p-0 lg:gap-0">
+            {ServicesData.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col gap-2 w-full items-start lg:w-1/2 lg:p-6"
+              >
+                <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[70px] h-[70px] items-center justify-center rounded-lg">
+                  {item.icon}
+                </div>
 
-            <h3 className="text-2xl font-semibold">{item.title}</h3>
-            <p className="text-sm">{item.description}</p>
+                <h3 className="text-2xl font-semibold">{item.title}</h3>
+                <p className="text-sm text-start">{item.description}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
 
-      <div className="flex w-full">
-        <Image
-          src={"/images/servicesHero.png"}
-          alt="Mulher de jaleco com estetoscópio"
-          width={360}
-          height={540}
-          className="lg:w-[487px] w-full lg:h-[600px] DropShadow"
-          quality={100}
-        />
+        <div className="flex w-screen lg:w-1/3">
+          <Image
+            src={"/images/servicesHero.png"}
+            alt="Mulher de jaleco com estetoscópio"
+            width={360}
+            height={540}
+            className="lg:w-[487px] w-full lg:h-fit DropShadow"
+            quality={100}
+          />
+        </div>
       </div>
     </section>
   );

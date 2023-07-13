@@ -31,15 +31,15 @@ export default function HeroSection() {
     <>
       <section
         id="home"
-        className="flex relative flex-col justify-between h-full min-h-screen w-full pl-8 pt-[calc(86px*1.5)] lg:p-0 lg:flex-row lg:items-center lg:min-h-[95vh]"
+        className="flex relative flex-col justify-between min-h-[85vh] h-full w-full pl-8 pt-[calc(86px*1.5)] md:p-0 md:flex-row md:items-center md:min-h-[95vh]"
       >
-        <div className="flex flex-col items-start gap-4 text-black-100 lg:w-1/2 lg:px-[10%] lg:gap-8">
+        <div className="flex flex-col items-start gap-4 text-black-100 md:w-1/2 md:px-[10%] md:gap-8">
           <p className="font-semibold">Potencialize sua prática médica</p>
-          <h1 className="font-bold text-5xl lg:text-6xl">
+          <h1 className="font-bold text-5xl md:text-6xl">
             Simplificando o seu dia a dia
           </h1>
 
-          <div className="flex flex-col gap-2 flex-wrap lg:gap-4">
+          <div className="flex flex-col gap-2 flex-wrap md:gap-4">
             {HeroServicesData.map((item) => (
               <div
                 key={item.id}
@@ -55,7 +55,7 @@ export default function HeroSection() {
             ))}
           </div>
 
-          <div className="lg:flex flex-row items-center gap-5 lg:mt-12 hidden">
+          <div className="md:flex flex-row items-center gap-5 md:mt-12 hidden">
             {heroStatistic.map((item) => (
               <div className="flex flex-col items-center gap-3" key={item.id}>
                 <p className="text-4xl font-bold">
@@ -68,13 +68,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="flex w-full justify-end lg:w-1/2">
+        <div className="flex w-full justify-end md:w-1/2">
           <Image
             src={"/images/hero.png"}
             width={640}
             height={524}
             alt="Logomarca com imagens de médicos dentro"
-            className="w-[290px] h-[350] lg:w-[524px] lg:h-[640px]]]"
+            className="w-[290px] h-[350] md:w-[524px] md:h-[640px]]]"
             quality={100}
           />
         </div>
@@ -82,11 +82,11 @@ export default function HeroSection() {
 
       <div
         id="circle-1"
-        className="BgCircles top-6 left-6 lg:-top-36 lg:-left-36 w-[250px] h-[250px] lg:w-[450px] lg:h-[450px]"
+        className="BgCircles top-6 left-6 md:-top-36 md:-left-36 w-[250px] h-[250px] md:w-[450px] md:h-[450px]"
       />
       <div
         id="circle-2"
-        className="BgCircles bottom-6 right-6 lg:bottom-36 lg:right-24 w-[250px] h-[250px] lg:w-[450px] lg:h-[450px]"
+        className="BgCircles bottom-6 right-6 md:bottom-36 md:right-24 w-[250px] h-[250px] md:w-[450px] md:h-[450px]"
       />
     </>
   );

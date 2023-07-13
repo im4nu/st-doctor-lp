@@ -84,7 +84,7 @@ export default function FeedbackSection() {
       id="feedback"
       className="flex flex-col h-full gap-5 py-24 items-center"
     >
-      <div className="flex text-start flex-col justify-center gap-5 px-8">
+      <div className="flex text-start flex-col justify-center gap-5 px-8 max-w-lg">
         <p className="font-semibold">Qualidade Garantida</p>
         <h2 className="text-5xl font-bold StDoctorSpan">
           Confira alguns depoimentos
@@ -95,32 +95,41 @@ export default function FeedbackSection() {
         </p>
       </div>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={step}
-          initial={{ x: 10, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -10, opacity: 0 }}
-          transition={{ duration: 0.2 }}
-          className="flex flex-col h-full gap-12 items-center"
-        >
-          <a
-            href="#"
-            className="flex flex-col w-[90%] gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
+      <a
+        href="#"
+        className="flex flex-col w-[90%] gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
+      >
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={step}
+            initial={{ x: 10, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
           >
             <p>{feedbackDataPosition.atuationArea}</p>
             <h3 className="text-4xl font-semibold w-3/4">
               {feedbackDataPosition.clinic}
             </h3>
-            <p>Saber mais</p>
-          </a>
+          </motion.div>
+        </AnimatePresence>
+        <p>Saber mais</p>
+      </a>
 
-          <ContainedLink
-            link={feedbackDataPosition.link}
-            title="Ver todos depoimentos"
-          />
+      <ContainedLink
+        link={feedbackDataPosition.link}
+        title="Ver todos depoimentos"
+      />
 
-          <div className="flex flex-col w-[90%] bg-gradient-to-br from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3">
+      <div className="flex flex-col w-[90%] bg-gradient-to-br from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3 max-w-md">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={step}
+            initial={{ x: 10, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="flex flex-row -m-3 items-center w-full">
               <Image
                 src={"/images/feedbackProfissional1.png"}
@@ -138,9 +147,9 @@ export default function FeedbackSection() {
             <p className="text-center text-sm p-8">
               {feedbackDataPosition.feedback}
             </p>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       <div className="flex flex-row w-3/4 max-w-sm items-center justify-around">
         <button

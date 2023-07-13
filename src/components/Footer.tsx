@@ -1,38 +1,38 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { feedbackData } from './Feedback';
+import Image from "next/image";
+import { feedbackData } from "./Feedback";
 
 const socialMedia = [
   {
     id: 0,
-    name: 'Google',
-    link: 'https://www.google.com/',
-    logo: '/icons/google.svg',
+    name: "Google",
+    link: "https://www.google.com/",
+    logo: "/icons/google.svg",
   },
   {
     id: 1,
-    name: 'Instagram',
-    link: 'https://www.instagram.com/',
-    logo: '/icons/instagram.svg',
+    name: "Instagram",
+    link: "https://www.instagram.com/",
+    logo: "/icons/instagram.svg",
   },
   {
     id: 2,
-    name: 'Twitter',
-    link: 'https://twitter.com/',
-    logo: '/icons/twitter.svg',
+    name: "Twitter",
+    link: "https://twitter.com/",
+    logo: "/icons/twitter.svg",
   },
   {
     id: 3,
-    name: 'LinkedIn',
-    link: 'https://www.linkedin.com/',
-    logo: '/icons/linkedin.svg',
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/",
+    logo: "/icons/linkedin.svg",
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col h-full items-center justify-center w-full border-t px-8 py-24 gap-12">
+    <footer className="flex flex-col h-full items-center justify-center w-full px-8 py-24 gap-12">
       <div className="flex flex-col items-start text-start gap-3 w-full">
         <h4 className="font-bold text-lg">Siga-nos</h4>
         <p>Conheça mais o StDoctor através das nossas redes sociais</p>

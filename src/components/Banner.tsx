@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import { ContainedLink } from './Link';
+import Image from "next/image";
+import { ContainedLink } from "./Link";
 
 export default function Banner() {
   return (
-    <section className="flex flex-col bg-white rounded-xl items-center text-center gap-6 py-20">
+    <section className="flex flex-col bg-white rounded-xl items-center text-center gap-6 py-20 max-w-xl px-6">
       <div className="flex flex-col font-semibold gap-3">
         <p>Tá esperando o que?</p>
         <h2 className="text-4xl font-bold">Faça agora mesmo um</h2>
@@ -15,13 +15,13 @@ export default function Banner() {
       <p className="px-8">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales morbi
         tristique libero urna sem vitae. Viverra facilisis rhoncus et, nibh
-        nullam vitae laoreet.{' '}
+        nullam vitae laoreet.{" "}
       </p>
       <ContainedLink title="Quero testar gratuitamente" />
 
       <div className="flex w-full items-start px-2">
         <Image
-          src={'/images/logo.png'}
+          src={"/images/logo.png"}
           width={70}
           height={70}
           alt="Logomarca St Doctor"
