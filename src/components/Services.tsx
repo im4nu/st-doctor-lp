@@ -8,7 +8,6 @@ import Image from "next/image";
 
 const Logos = [
   { id: 0, url: "/images/partnerLogo/logo1.png", w: 250, h: 46 },
-  { id: 0, url: "/images/partnerLogo/logo1.png", w: 250, h: 46 },
   { id: 1, url: "/images/partnerLogo/logo2.png", w: 100, h: 50 },
   { id: 2, url: "/images/partnerLogo/logo3.png", w: 145, h: 30 },
   { id: 3, url: "/images/partnerLogo/logo4.png", w: 120, h: 50 },
