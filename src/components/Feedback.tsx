@@ -82,98 +82,102 @@ export default function FeedbackSection() {
   return (
     <section
       id="feedback"
-      className="flex flex-col h-full gap-5 py-24 items-center"
+      className="flex flex-col h-full gap-12 py-24 items-center justify-center lg:flex-row lg:gap-28"
     >
-      <div className="flex text-start flex-col justify-center gap-5 px-8 max-w-lg">
-        <p className="font-semibold">Qualidade Garantida</p>
-        <h2 className="text-5xl font-bold StDoctorSpan">
-          Confira alguns depoimentos
-        </h2>
-        <p>
-          Alguns dos nossos clientes estão aqui pra contar a experiência deles
-          com o nosso sistema{" "}
-        </p>
-      </div>
+      <div className="flex flex-col lg:w-1/2 items-center justify-center gap-12">
+        <div className="flex text-start flex-col justify-center gap-5 px-8 max-w-lg">
+          <p className="font-semibold">Qualidade Garantida</p>
+          <h2 className="text-5xl font-bold StDoctorSpan">
+            Confira alguns depoimentos
+          </h2>
+          <p>
+            Alguns dos nossos clientes estão aqui pra contar a experiência deles
+            com o nosso sistema{" "}
+          </p>
+        </div>
 
-      <a
-        href="#"
-        className="flex flex-col w-[90%] gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={step}
-            initial={{ x: 10, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <p>{feedbackDataPosition.atuationArea}</p>
-            <h3 className="text-4xl font-semibold w-3/4">
-              {feedbackDataPosition.clinic}
-            </h3>
-          </motion.div>
-        </AnimatePresence>
-        <p>Saber mais</p>
-      </a>
-
-      <ContainedLink
-        link={feedbackDataPosition.link}
-        title="Ver todos depoimentos"
-      />
-
-      <div className="flex flex-col w-[90%] bg-gradient-to-br from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3 max-w-md">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={step}
-            initial={{ x: 10, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="flex flex-row -m-3 items-center w-full">
-              <Image
-                src={"/images/feedbackProfissional1.png"}
-                alt="Imagem do comentarista"
-                width={175}
-                height={175}
-                className="lg:w-[227px] lg:h-[227px] rounded-full"
-              />
-
-              <h3 className="text-5xl text-end">
-                {feedbackDataPosition.doctor}
+        <a
+          href="#"
+          className="flex flex-col w-[90%] gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={step}
+              initial={{ x: 10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <p>{feedbackDataPosition.atuationArea}</p>
+              <h3 className="text-4xl font-semibold w-3/4">
+                {feedbackDataPosition.clinic}
               </h3>
-            </div>
+            </motion.div>
+          </AnimatePresence>
+          <p>Saber mais</p>
+        </a>
 
-            <p className="text-center text-sm p-8">
-              {feedbackDataPosition.feedback}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+        <ContainedLink
+          link={feedbackDataPosition.link}
+          title="Ver todos depoimentos"
+        />
       </div>
 
-      <div className="flex flex-row w-3/4 max-w-sm items-center justify-around">
-        <button
-          onClick={HandlePreviousCard}
-          className="flex min-h-[18px] min-w-[18px] rounded-full p-3 GradientButton"
-        >
-          <ArrowLeft2 size={18} color="#fff" />
-        </button>
+      <div className="flex flex-col lg:w-1/2 items-center justify-center gap-12">
+        <div className="flex flex-col w-[90%] bg-gradient-to-br from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3 max-w-md">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={step}
+              initial={{ x: 10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -10, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="flex flex-row -m-3 items-center w-full">
+                <Image
+                  src={"/images/feedbackProfissional1.png"}
+                  alt="Imagem do comentarista"
+                  width={175}
+                  height={175}
+                  className="lg:w-[227px] lg:h-[227px] rounded-full"
+                />
 
-        {feedbackData.map((item, index) => (
-          <div
-            key={item.id}
-            className={`${
-              step === index ? "bg-primary-100" : ""
-            } flex rounded-full p-1 border border-primary-100 ease-linear duration-500`}
-          />
-        ))}
+                <h3 className="text-5xl text-end">
+                  {feedbackDataPosition.doctor}
+                </h3>
+              </div>
 
-        <button
-          onClick={HandleNextCard}
-          className="flex min-h-[18px] min-w-[18px] rounded-full p-3 GradientButton"
-        >
-          <ArrowRight2 size={18} color="#fff" />
-        </button>
+              <p className="text-center text-sm p-8">
+                {feedbackDataPosition.feedback}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="flex flex-row w-3/4 max-w-sm items-center justify-around">
+          <button
+            onClick={HandlePreviousCard}
+            className="flex min-h-[18px] min-w-[18px] rounded-full p-3 GradientButton"
+          >
+            <ArrowLeft2 size={18} color="#fff" />
+          </button>
+
+          {feedbackData.map((item, index) => (
+            <div
+              key={item.id}
+              className={`${
+                step === index ? "bg-primary-100" : ""
+              } flex rounded-full p-1 border border-primary-100 ease-linear duration-500`}
+            />
+          ))}
+
+          <button
+            onClick={HandleNextCard}
+            className="flex min-h-[18px] min-w-[18px] rounded-full p-3 GradientButton"
+          >
+            <ArrowRight2 size={18} color="#fff" />
+          </button>
+        </div>
       </div>
     </section>
   );
