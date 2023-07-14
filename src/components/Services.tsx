@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   DocumentText1,
   Mobile,
@@ -5,6 +8,7 @@ import {
   ReceiptItem,
 } from "iconsax-react";
 import Image from "next/image";
+import { useRef } from "react";
 
 const ServicesData = [
   {
@@ -38,6 +42,7 @@ const ServicesData = [
 ];
 
 export default function ServicesSection() {
+  const scrollRef = useRef(null);
   return (
     <section
       id="services"
@@ -67,13 +72,20 @@ export default function ServicesSection() {
               <div
                 key={item.id}
                 className="flex flex-col gap-2 w-full items-start lg:w-1/2 lg:p-6"
+                ref={scrollRef}
               >
-                <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[70px] h-[70px] items-center justify-center rounded-lg">
-                  {item.icon}
-                </div>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[70px] h-[70px] items-center justify-center rounded-lg">
+                    {item.icon}
+                  </div>
 
-                <h3 className="text-2xl font-semibold">{item.title}</h3>
-                <p className="text-sm text-start">{item.description}</p>
+                  <h3 className="text-2xl font-semibold">{item.title}</h3>
+                  <p className="text-sm text-start">{item.description}</p>
+                </motion.div>
               </div>
             ))}
           </div>
