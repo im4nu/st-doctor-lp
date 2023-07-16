@@ -29,21 +29,45 @@ body {
   -webkit-border-radius: 1ex;
 }
 
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(calc(-25vw - 987px));
+@media screen and (min-width: 1024px) {
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(calc(-25vw - 987px));
+    }
+    100% {
+      transform: translateX(calc(125vw - 987px));
+    }
   }
-  100% {
-    transform: translateX(calc(125vw - 987px));
+
+@media screen and (min-width: 1024px) {}
+  @keyframes scroll {
+    0% {
+      transform: translateX(calc(-25vw - 987px));
+    }
+    100% {
+      transform: translateX(calc(125vw - 987px));
+    }
   }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(calc(-25vw - 987px));
+@media screen and (max-width: 1023px) {
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(calc(-700px));
+    }
+    100% {
+      transform: translateX(calc(700px));
+    }
   }
-  100% {
-    transform: translateX(calc(125vw - 987px));
+
+@media screen and (max-width: 1024px) {}
+  @keyframes scroll {
+    0% {
+      transform: translateX(calc(-700px));
+    }
+    100% {
+      transform: translateX(calc(700px));
+    }
   }
 }
 
@@ -101,11 +125,20 @@ body {
 }
 
 
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: var(--accent);
-  bottom: 100px;
+/* System Preview */
+.previewSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+.previewSection > div {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
