@@ -135,7 +135,7 @@ export default function FeedbackSection() {
             >
               <div className="flex flex-row -m-3 items-center w-full">
                 <Image
-                  src={"/images/feedbackProfissional1.png"}
+                  src={feedbackDataPosition.image}
                   alt="Imagem do comentarista"
                   width={175}
                   height={175}
