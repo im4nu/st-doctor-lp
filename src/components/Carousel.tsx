@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export function Carousel() {
   const Logos = [
-    { id: 0, url: "/images/partnerLogo/logo1.png", w: 250, h: 46 },
-    { id: 1, url: "/images/partnerLogo/logo2.png", w: 100, h: 50 },
-    { id: 2, url: "/images/partnerLogo/logo3.png", w: 145, h: 30 },
-    { id: 3, url: "/images/partnerLogo/logo4.png", w: 120, h: 50 },
-    { id: 4, url: "/images/partnerLogo/logo5.png", w: 180, h: 45 },
+    { id: 0, url: "/images/logoCarousel/logo1.png", w: 250, h: 46 },
+    { id: 1, url: "/images/logoCarousel/logo2.png", w: 100, h: 50 },
+    { id: 2, url: "/images/logoCarousel/logo3.png", w: 145, h: 30 },
+    { id: 3, url: "/images/logoCarousel/logo4.png", w: 120, h: 50 },
+    { id: 4, url: "/images/logoCarousel/logo5.png", w: 180, h: 45 },
   ];
 
   return (

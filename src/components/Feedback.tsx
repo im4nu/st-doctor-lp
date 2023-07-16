@@ -13,7 +13,7 @@ export const feedbackData = [
     clinic: "Clínica de Ortopedia",
     link: "https://www.stdoctor.com.br",
     atuationArea: "Clínica de ortopedia",
-    image: "/images/feedback/1.png",
+    image: "/images/feedbackCarousel/dr1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
@@ -22,7 +22,7 @@ export const feedbackData = [
     clinic: "Clínica de Olhos do Cariri",
     link: "https://www.stdoctor.com.br",
     atuationArea: "Clínica de oftalmologia",
-    image: "/images/feedback/1.png",
+    image: "/images/feedbackCarousel/dr1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
@@ -31,7 +31,7 @@ export const feedbackData = [
     clinic: "Clínirin",
     link: "https://www.stdoctor.com.br",
     atuationArea: "Clínica de Rins",
-    image: "/images/feedback/1.png",
+    image: "/images/feedbackCarousel/dr1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
@@ -40,7 +40,7 @@ export const feedbackData = [
     clinic: "Laboratório Costa",
     link: "https://www.stdoctor.com.br",
     atuationArea: "Laboratório de Análises Clínicas",
-    image: "/images/feedback/1.png",
+    image: "/images/feedbackCarousel/dr1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
   {
@@ -49,7 +49,7 @@ export const feedbackData = [
     clinic: "C.O.P Centro de ortopedia",
     link: "https://www.stdoctor.com.br",
     atuationArea: "Clínica de ortopedia",
-    image: "/images/feedback/1.png",
+    image: "/images/feedbackCarousel/dr1.png",
     feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
   },
 ];
