@@ -1,5 +1,6 @@
 import { Verify } from "iconsax-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const HeroServicesData = [
   { id: 0, label: "Sistema + Aplicativo personalizados para a sua demanda" },
@@ -28,10 +29,15 @@ const heroStatistic = [
 
 export default function HeroSection() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="relative w-full h-full"
+    >
       <section
         id="home"
-        className="flex relative flex-col justify-between min-h-[85vh] h-full w-full pl-8 pt-[calc(86px*1.5)] md:p-0 md:flex-row md:items-center md:min-h-[95vh]"
+        className="flex flex-col justify-between min-h-[85vh] h-full w-full pl-8 pt-[calc(86px*1.5)] md:p-0 md:flex-row md:items-center md:min-h-[95vh]"
       >
         <div className="flex flex-col items-start gap-4 text-black-100 md:w-1/2 md:px-[10%] md:gap-8">
           <p className="font-semibold">Potencialize sua prática médica</p>
@@ -88,6 +94,6 @@ export default function HeroSection() {
         id="circle-2"
         className="BgCircles bottom-6 right-6 md:bottom-36 md:right-24 w-[250px] h-[250px] md:w-[450px] md:h-[450px]"
       />
-    </>
+    </motion.div>
   );
 }

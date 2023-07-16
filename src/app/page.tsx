@@ -38,19 +38,21 @@ export default function Home() {
       <div className="flex flex-col items-center gap-3 right-4 bottom-4 fixed">
         <a
           href="#home"
-          className="flex rounded-full pulse p-4 bg-green-700 text-[#E8E6ED]"
+          className="flex rounded-full p-4 bg-green-700 text-[#E8E6ED] ease-in-out duration-300"
         >
           <Whatsapp />
         </a>
 
-        <a
-          href="#home"
-          className={`${
-            !isScrollAtTop ? "opacity-100" : "opacity-0"
-          } ease-in-out duration-300 rounded-full flex p-4 text-[#E8E6ED] bg-black-100`}
-        >
-          <ArrowUp2 />
-        </a>
+        <div className={`flex ${!isScrollAtTop ? "opacity-100" : "opacity-0"}`}>
+          <a
+            href="#home"
+            className={`${
+              isScrollAtTop ? "-mb-[100px]" : "h-[56px]"
+            } ease-in-out duration-300 rounded-full flex p-4 text-[#E8E6ED] bg-black-100`}
+          >
+            <ArrowUp2 />
+          </a>
+        </div>
       </div>
     </main>
   );

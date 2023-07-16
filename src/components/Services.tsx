@@ -43,6 +43,21 @@ const ServicesData = [
 
 export default function ServicesSection() {
   const scrollRef = useRef(null);
+  const cardVariants = {
+    offscreen: {
+      x: "50vw",
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.6,
+      },
+    },
+  };
   return (
     <section
       id="services"
@@ -55,7 +70,7 @@ export default function ServicesSection() {
 
       <div className="flex flex-col lg:items-center lg:flex-row-reverse lg:justify-evenly 2xl:justify-center">
         <div className="flex flex-col gap-8 text-center px-8 max-w-md md:max-w-none md:items-center md:w-full lg:text-start lg:w-1/2 2xl:w-1/3">
-          <h2 className="hidden lg:flex text-4xl font-bold text-black-100">
+          <h2 className="hidden lg:flex text-4xl font-bold text-black-100 w-full">
             Nossos <span> </span>
             <span className="text-4xl px-2 font-bold StDoctorSpan">
               Serviços
@@ -69,24 +84,23 @@ export default function ServicesSection() {
 
           <div className="flex flex-col gap-12 pl-8 lg:flex-row lg:flex-wrap lg:p-0 lg:gap-0">
             {ServicesData.map((item) => (
-              <div
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
                 key={item.id}
-                className="flex flex-col gap-2 w-full items-start lg:w-1/2 lg:p-6"
+                className="flex flex-col gap-2 w-full items-start lg:w-1/2 lg:p-6 lg:gap-4"
                 ref={scrollRef}
               >
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
+                <motion.div className="card" variants={cardVariants}>
                   <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[70px] h-[70px] items-center justify-center rounded-lg">
                     {item.icon}
                   </div>
-
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
-                  <p className="text-sm text-start">{item.description}</p>
                 </motion.div>
-              </div>
+
+                <h3 className="text-2xl font-semibold">{item.title}</h3>
+                <p className="text-sm text-start">{item.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -102,29 +102,6 @@ body {
   filter: blur(225.8274383544922px);
 }
 
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-.pulse{
-  animation: pulse 1s ease-out infinite;
-}
-
-
 /* System Preview */
 .previewSection {
   height: 100vh;
