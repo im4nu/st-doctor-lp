@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "~/components/Navbar";
 import HeroSection from "~/components/Hero";
 import Banner from "~/components/Banner";
@@ -8,11 +10,23 @@ import { ArrowUp2, Whatsapp } from "iconsax-react";
 import LGPDBanner from "~/components/LGPD";
 import Footer from "~/components/Footer";
 import { Carousel } from "~/components/Carousel";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isScrollAtTop, setIsScrollAtTop] = useState(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      const isAtTop = window.scrollY === 0;
+      setIsScrollAtTop(isAtTop);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <main className="flex h-full w-screen flex-col items-center justify-between bg-white-200 font-medium text-black-100">
-      <Navbar />
+      <Navbar isScrollAtTop={isScrollAtTop} />
       <HeroSection />
       <LGPDBanner />
       <Carousel />
@@ -31,7 +45,9 @@ export default function Home() {
 
         <a
           href="#home"
-          className="rounded-full flex p-4 text-[#E8E6ED] bg-black-100"
+          className={`${
+            !isScrollAtTop ? "opacity-100" : "opacity-0"
+          } ease-in-out duration-300 rounded-full flex p-4 text-[#E8E6ED] bg-black-100`}
         >
           <ArrowUp2 />
         </a>

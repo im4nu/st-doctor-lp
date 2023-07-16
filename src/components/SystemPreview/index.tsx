@@ -1,15 +1,8 @@
 "use client";
 
-// Photos from https://citizenofnowhe.re/lines-of-the-city
 import "./style.css";
 import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -17,11 +10,10 @@ function useParallax(value: MotionValue<number>, distance: number) {
 
 const cardVariants = {
   offscreen: {
-    y: 300,
+    opacity: 0,
   },
   onscreen: {
-    y: 50,
-    rotate: -10,
+    opacity: 1,
     transition: {
       type: "spring",
       bounce: 0.4,
@@ -33,7 +25,7 @@ const cardVariants = {
 function Image({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
+  const y = useParallax(scrollYProgress, 250);
 
   return (
     <section className="previewSection">
@@ -45,14 +37,30 @@ function Image({ id }: { id: number }) {
         <div ref={ref}>
           <motion.div className="card" variants={cardVariants}>
             <img
-              src={`/images/previewCarousel/${id}.jpeg`}
-              alt="A London skyscraper"
-              className="previewImg card"
+              src={`/images/previewCarousel/desktop${id}.png`}
+              alt="Imagem do sistema"
+              className="absolute w-screen h-screen object-cover lg:flex hidden"
+            />
+
+            <img
+              src={`/images/previewCarousel/mobile${id}.png`}
+              alt="Imagem do sistema"
+              className="absolute w-screen h-screen object-cover flex lg:hidden"
             />
           </motion.div>
         </div>
       </motion.div>
-      <motion.h2 className="previewH2" style={{ y }}>{`#00${id}`}</motion.h2>
+      <motion.h2
+        className="absolute left-0 text-white-100 text-2xl lg:text-4xl font-bold"
+        style={{ y }}
+      >
+        <p className="flex flex-row items-center pl-4 lg:pl-8 gap-2 lg:gap-4">
+          <span className="rounded-full flex p-1 bg-primary-100 lg:p-2" />
+          {id === 1 ? "Dashboard" : ""}
+          {id === 2 ? "Cadastro" : ""}
+          {id === 3 ? "Agenda" : ""}
+        </p>
+      </motion.h2>
     </section>
   );
 }
@@ -60,7 +68,7 @@ function Image({ id }: { id: number }) {
 export default function App() {
   return (
     <>
-      {[1, 2, 3, 4, 5].map((image) => (
+      {[1, 2, 3].map((image) => (
         <Image id={image} />
       ))}
     </>

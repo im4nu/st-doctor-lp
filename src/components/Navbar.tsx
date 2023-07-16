@@ -12,23 +12,15 @@ const NavigationMenuData = [
   { id: 3, label: "Depoimentos", link: "#feedback" },
 ];
 
-export default function Navbar() {
+interface NavigationMenuProps {
+  isScrollAtTop: boolean;
+}
+
+export default function Navbar({ isScrollAtTop }: NavigationMenuProps) {
   const [menuActive, setMenuActive] = useState(false);
-  const [isScrollAtTop, setIsScrollAtTop] = useState(true);
   function ToggleMenu() {
     setMenuActive((current) => !current);
   }
-  useEffect(() => {
-    const handleScroll = () => {
-      const isAtTop = window.scrollY === 0;
-      setIsScrollAtTop(isAtTop);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <nav
       className={`${
