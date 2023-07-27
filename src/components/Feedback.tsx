@@ -9,48 +9,21 @@ import { ContainedLink } from "./Link";
 export const feedbackData = [
   {
     id: 0,
-    doctor: "James Web",
-    clinic: "Clínica de Ortopedia",
-    link: "https://www.stdoctor.com.br",
-    atuationArea: "Clínica de ortopedia",
-    image: "/images/feedbackCarousel/dr1.png",
-    feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
+    doctor: "Dr. Pedro Rodrigues",
+    clinic: null,
+    link: "#",
+    atuationArea: "Cardiologista",
+    image: "/images/feedbackCarousel/dr-pedro-rodrigues.png",
+    feedback: `Há pouco mais de 5 anos trabalhamos com o StDoctor, e a evolução tem sido constante, com atualizações e facilidades no sistema, o que nos proporciona agilidade nos atendimentos e credibilidade. Além disso, recebemos auxílio fora do consultório, agora com o aplicativo gratuito. Mas o principal para mim é a assistência, que é impecável. Essas alterações corrigem alguns erros de pontuação e de concordância, tornando o comentário mais claro e fluente. Se houver mais alguma coisa em que eu possa ajudar, é só dizer!`,
   },
   {
     id: 1,
-    doctor: "Manu Rodrigues",
-    clinic: "Clínica de Olhos do Cariri",
-    link: "https://www.stdoctor.com.br",
-    atuationArea: "Clínica de oftalmologia",
-    image: "/images/feedbackCarousel/dr1.png",
-    feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
-  },
-  {
-    id: 2,
-    doctor: "Rian Landim",
-    clinic: "Clínirin",
-    link: "https://www.stdoctor.com.br",
-    atuationArea: "Clínica de Rins",
-    image: "/images/feedbackCarousel/dr1.png",
-    feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
-  },
-  {
-    id: 3,
-    doctor: "Niko Robin",
-    clinic: "Laboratório Costa",
-    link: "https://www.stdoctor.com.br",
-    atuationArea: "Laboratório de Análises Clínicas",
-    image: "/images/feedbackCarousel/dr1.png",
-    feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
-  },
-  {
-    id: 4,
-    doctor: "Petter Pan",
-    clinic: "C.O.P Centro de ortopedia",
-    link: "https://www.stdoctor.com.br",
-    atuationArea: "Clínica de ortopedia",
-    image: "/images/feedbackCarousel/dr1.png",
-    feedback: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas...`,
+    doctor: "Dra. Luciana Rocha",
+    clinic: null,
+    link: "#",
+    atuationArea: "Dermatologia",
+    image: "/images/feedbackCarousel/dra-luciana.png",
+    feedback: `O StDoctor é um sistema completo e fácil de operar. A assistência técnica é perfeita e a recente gestão financeira é uma ótima adição. Com atualizações frequentes, temos agilidade nos atendimentos e mais credibilidade. O aplicativo gratuito também auxilia fora do consultório. Sem dúvida, o StDoctor é essencial para aprimorar nossas práticas na área da saúde e oferecer um serviço de excelência aos pacientes.`,
   },
 ];
 
@@ -82,7 +55,7 @@ export default function FeedbackSection() {
   return (
     <section
       id="feedback"
-      className="flex flex-col h-full gap-12 py-24 items-center justify-center lg:flex-row lg:gap-28"
+      className="flex flex-col max-w-7xl h-full gap-12 py-24 w-full items-center justify-center lg:flex-row lg:gap-28"
     >
       <div className="flex flex-col lg:w-1/2 items-center justify-center gap-12">
         <div className="flex text-start flex-col justify-center gap-5 px-8 max-w-lg">
@@ -98,7 +71,7 @@ export default function FeedbackSection() {
 
         <a
           href="#"
-          className="flex flex-col w-[90%] gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
+          className="lg:flex hidden flex-col w-[90%] max-w-md gap-5 h-[215px] rounded-xl bg-feedback-1 bg-cover bg-no-repeat items-start justify-center pl-8 text-white-200 DropShadow"
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -110,7 +83,7 @@ export default function FeedbackSection() {
             >
               <p>{feedbackDataPosition.atuationArea}</p>
               <h3 className="text-4xl font-semibold w-3/4">
-                {feedbackDataPosition.clinic}
+                {feedbackDataPosition.clinic ?? feedbackDataPosition.doctor}
               </h3>
             </motion.div>
           </AnimatePresence>
@@ -124,7 +97,7 @@ export default function FeedbackSection() {
       </div>
 
       <div className="flex flex-col lg:w-1/2 items-center justify-center gap-12">
-        <div className="flex flex-col w-[90%] h-[350px] items-center justify-center bg-gradient-to-br from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3 max-w-md">
+        <div className="flex flex-col w-[80%] lg:min-h-[400px] lg:h-fit items-start justify-start bg-gradient-to-bl from-primary-300 to-primary-100 text-white-200 rounded-lg mx-3 max-w-md">
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -133,21 +106,24 @@ export default function FeedbackSection() {
               exit={{ x: -10, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="flex flex-row -m-3 items-center w-full">
-                <Image
-                  src={feedbackDataPosition.image}
-                  alt="Imagem do comentarista"
-                  width={175}
-                  height={175}
-                  className="w-[175px] h-full lg:w-[227px] lg:h-[227px] rounded-full"
-                />
+              <div className="flex flex-col lg:flex-row-reverse items-center lg:items-start justify-between w-full">
+                <div className="flex items-center min-w-[180px] min-h-[180px] rounded-full bg-white-200 lg:-mr-12 lg:-mt-8 -mt-8">
+                  <Image
+                    src={feedbackDataPosition.image}
+                    alt="Responsável pelo comentário"
+                    width={190}
+                    height={190}
+                    quality={100}
+                    className="flex max-w-[190px] max-h-[190px] rounded-full object-cover lg:-mr-24 lg:-mt-16 -mt-8"
+                  />
+                </div>
 
-                <h3 className="text-5xl text-end">
+                <h3 className="text-4xl lg:text-5xl text-center lg:text-start lg:p-8 px-5 py-4">
                   {feedbackDataPosition.doctor}
                 </h3>
               </div>
 
-              <p className="text-center text-sm p-8">
+              <p className="text-center font-bold text-sm lg:p-8 px-5 py-4">
                 {feedbackDataPosition.feedback}
               </p>
             </motion.div>

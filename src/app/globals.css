@@ -32,20 +32,20 @@ body {
 @media screen and (min-width: 1024px) {
   @-webkit-keyframes scroll {
     0% {
-      transform: translateX(calc(-25vw - 987px));
+      transform: translateX(calc(125vw - 900px));
     }
     100% {
-      transform: translateX(calc(125vw - 987px));
+      transform: translateX(calc(-25vw - 1245px));
     }
   }
 
 @media screen and (min-width: 1024px) {}
   @keyframes scroll {
     0% {
-      transform: translateX(calc(-25vw - 987px));
+      transform: translateX(calc(125vw - 900px));
     }
     100% {
-      transform: translateX(calc(125vw - 987px));
+      transform: translateX(calc(-25vw - 1245px));
     }
   }
 }
@@ -53,27 +53,27 @@ body {
 @media screen and (max-width: 1023px) {
   @-webkit-keyframes scroll {
     0% {
-      transform: translateX(calc(-700px));
+      transform: translateX(calc(700px));
     }
     100% {
-      transform: translateX(calc(700px));
+      transform: translateX(calc(-700px));
     }
   }
 
 @media screen and (max-width: 1024px) {}
   @keyframes scroll {
     0% {
-      transform: translateX(calc(-700px));
+      transform: translateX(calc(700px));
     }
     100% {
-      transform: translateX(calc(700px));
+      transform: translateX(calc(-700px));
     }
   }
 }
 
 .slider {
-  -webkit-animation: scroll 12s linear infinite;
-  animation: scroll 12s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .StDoctorSpan{

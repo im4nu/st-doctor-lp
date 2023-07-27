@@ -11,7 +11,7 @@ export function Carousel() {
 
   return (
     <div className="flex slider py-10 items-center justify-start">
-      <div className="flex flex-row gap-12 items-center justify-center my-12 slide-track">
+      <div className="flex flex-row gap-28 items-center justify-center my-12 slide-track">
         {Logos.map((item) => (
           <Image
             key={item.id}
