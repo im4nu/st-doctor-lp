@@ -31,7 +31,9 @@ export default function Home() {
       <LGPDBanner />
       <Carousel />
       <ServicesSection />
-      <SystemPreviewSection />
+      <div className="bg-systemPreview bg-no-repeat bg-cover">
+        <SystemPreviewSection />
+      </div>
       <FeedbackSection />
       <Banner />
       <Footer />

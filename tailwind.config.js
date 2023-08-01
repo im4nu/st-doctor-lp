@@ -10,7 +10,7 @@ module.exports = {
         backgroundImage:{
           'logo': "url('/images/logo.png')",
           'carousel': "url('/images/carouselBg.png')",
-          'systemPreview': "url('/images/systemPreview/mobileBg.png')",
+          'systemPreview': "url('/images/systemPreview/bg.png')",
           //feedbackCards
           'feedback-1': "url('/images/feedbackClinic1.png')",
         },

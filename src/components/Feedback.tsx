@@ -4,7 +4,6 @@ import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ContainedLink } from "./Link";
 
 export const feedbackData = [
   {
@@ -24,6 +23,15 @@ export const feedbackData = [
     atuationArea: "Dermatologia",
     image: "/images/feedbackCarousel/dra-luciana.png",
     feedback: `O StDoctor é um sistema completo e fácil de operar. A assistência técnica é perfeita e a recente gestão financeira é uma ótima adição. Com atualizações frequentes, temos agilidade nos atendimentos e mais credibilidade. O aplicativo gratuito também auxilia fora do consultório. Sem dúvida, o StDoctor é essencial para aprimorar nossas práticas na área da saúde e oferecer um serviço de excelência aos pacientes.`,
+  },
+  {
+    id: 2,
+    doctor: "Mônica Pereira",
+    clinic: "Interne Prime",
+    link: "#",
+    atuationArea: "Interne Prime",
+    image: "/images/feedbackCarousel/dra-luciana.png",
+    feedback: `Gostaria de parabenizar a todos que fazem parte da equipe StDoctor, pelo atendimento de excelência em todas as etapas do nosso processo. Com plataforma flexível e adequada a cada cliente conseguem demonstrar exclusividade em cada atendimento e olhar diferenciado para necessidade do que o cliente entende como valor.`,
   },
 ];
 
