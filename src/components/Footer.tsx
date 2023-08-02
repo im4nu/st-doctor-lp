@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-start text-start gap-3 w-full lg:w-1/6">
-          <a href="#">
+          <a href="https://www.starttec.com.br/">
             <Image
               src={"/images/startTec-logo.png"}
               width={150}
