@@ -38,21 +38,22 @@ export default function AllServices() {
         </Link>
       </div>
 
-      <div className="flex flex-col w-1/3 text-center gap-6">
+      <div className="flex flex-col lg:w-2/3 2xl:w-1/3 text-center items-center gap-6">
         <h2 className="text-5xl px-8 max-w-md text-center font-bold text-black-100 lg:px-0 md:max-w-none mt-28">
           Nossos <span> </span>
           <span className="text-5xl font-bold StDoctorSpan">
             Principais Serviços
           </span>
         </h2>
-        <p>
+
+        <p className="w-2/3">
           Confira nossos principais serviços e descubra tudo que temos a te
           oferecer! Conte sempre conosco quando o assunto for qualidade e
           segurança. Se tiver dúvidas entre em contato pelo whatsapp!
         </p>
       </div>
 
-      <div className="flex flex-col gap-12 pl-8 lg:flex-row lg:flex-wrap lg:p-0 lg:gap-0 w-1/2">
+      <div className="flex flex-col gap-12 lg:pl-8 lg:flex-row lg:flex-wrap lg:p-0 lg:gap-0 w-full lg:w-2/3 2xl:w-1/2">
         {ServicesData.map((item) => (
           <motion.div
             initial="offscreen"
@@ -69,7 +70,9 @@ export default function AllServices() {
             </motion.div>
 
             <h3 className="text-2xl font-semibold">{item.title}</h3>
-            <p className="text-sm text-center">{item.description}</p>
+            <p className="text-sm text-center w-2/3 lg:w-full">
+              {item.description}
+            </p>
           </motion.div>
         ))}
       </div>
