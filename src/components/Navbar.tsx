@@ -87,10 +87,10 @@ export default function Navbar({ isScrollAtTop }: NavigationMenuProps) {
                 {item.label}
               </a>
             ))}
-            <a href="#" className="p-2 underline">
+            <a href="https://wa.me/558197515199" className="p-2 underline">
               Fazer um teste agora
             </a>
-            <a href="#" className="p-2 underline">
+            <a href="https://sys.stdoctor.com.br/" className="p-2 underline">
               Entrar
             </a>
           </>
