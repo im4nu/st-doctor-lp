@@ -69,7 +69,7 @@ export default function AllServices() {
               </div>
             </motion.div>
 
-            <h3 className="text-2xl font-semibold">{item.title}</h3>
+            <h3 className="text-2xl font-semibold text-center">{item.title}</h3>
             <p className="text-sm text-center w-2/3 lg:w-full">
               {item.description}
             </p>

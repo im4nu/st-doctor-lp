@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { feedbackData } from "./Feedback";
 
 export default function Footer() {
@@ -61,7 +62,7 @@ export default function Footer() {
             <a
               className="hover:text-primary-200 hover:cursor-pointer ease-in-out duration-300"
               key={item.id}
-              href={item.link}
+              href={"#feedback"}
             >
               {item.clinic}
             </a>
@@ -69,29 +70,27 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-start text-start gap-3 w-full lg:w-1/6">
-          <h4 className="font-bold text-lg">Clínicas em Destaque</h4>
+          <h4 className="font-bold text-lg">Profissionais em Destaque</h4>
           {feedbackData.map((item) => (
             <a
               className="hover:text-primary-200 hover:cursor-pointer ease-in-out duration-300"
               key={item.id}
-              href={item.link}
+              href={"#feedback"}
             >
-              {item.clinic}
+              {item.doctor}
             </a>
           ))}
         </div>
 
         <div className="flex flex-col items-start text-start gap-3 w-full lg:w-1/6">
-          <h4 className="font-bold text-lg">Clínicas em Destaque</h4>
-          {feedbackData.map((item) => (
-            <a
-              className="hover:text-primary-200 hover:cursor-pointer ease-in-out duration-300"
-              key={item.id}
-              href={item.link}
-            >
-              {item.clinic}
-            </a>
-          ))}
+          <a href="#">
+            <Image
+              src={"/images/startTec-logo.png"}
+              width={150}
+              height={50}
+              alt="Start Tec"
+            />
+          </a>
         </div>
       </div>
 

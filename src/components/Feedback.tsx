@@ -33,6 +33,15 @@ export const feedbackData = [
     image: "/images/feedbackCarousel/dra-luciana.png",
     feedback: `Gostaria de parabenizar a todos que fazem parte da equipe StDoctor, pelo atendimento de excelência em todas as etapas do nosso processo. Com plataforma flexível e adequada a cada cliente conseguem demonstrar exclusividade em cada atendimento e olhar diferenciado para necessidade do que o cliente entende como valor.`,
   },
+  {
+    id: 3,
+    doctor: "Dr. Rilcon Coelho",
+    clinic: null,
+    link: "#",
+    atuationArea: "Oftalmologista",
+    image: "/images/feedbackCarousel/dr-rilcon-coelho.png",
+    feedback: `Sou oftalmologista, uso o StDoctor desde 2017 na clínica,  ajuda bastante com o prontuário eletrônico personalizado online (configurado para exame oftalmológico, medicações, laudos, prescrição de lentes, etc) e o suporte é bastante ativo e eficiente. Também tenho acesso pelo celular a minha agenda.`,
+  },
 ];
 
 export default function FeedbackSection() {
