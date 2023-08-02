@@ -13,7 +13,7 @@ export const feedbackData = [
     link: "#",
     atuationArea: "Cardiologista",
     image: "/images/feedbackCarousel/dr-pedro-rodrigues.png",
-    feedback: `Há pouco mais de 5 anos trabalhamos com o StDoctor, e a evolução tem sido constante, com atualizações e facilidades no sistema, o que nos proporciona agilidade nos atendimentos e credibilidade. Além disso, recebemos auxílio fora do consultório, agora com o aplicativo gratuito. Mas o principal para mim é a assistência, que é impecável. Essas alterações corrigem alguns erros de pontuação e de concordância, tornando o comentário mais claro e fluente. Se houver mais alguma coisa em que eu possa ajudar, é só dizer!`,
+    feedback: `Há pouco mais de 5 anos trabalhamos com o StDoctor, e a evolução tem sido constante, com atualizações e facilidades no sistema, o que nos proporciona agilidade nos atendimentos e credibilidade. Além disso, recebemos auxílio fora do consultório, agora com o aplicativo gratuito. Mas o principal para mim é a assistência, que é impecável. Essas alterações corrigem alguns erros de pontuação e de concordância, tornando o comentário mais claro e fluente.`,
   },
   {
     id: 1,
