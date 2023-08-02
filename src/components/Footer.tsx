@@ -1,35 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { feedbackData } from "./Feedback";
-import GoogleIcon from "/icons/google.svg";
-
-const socialMedia = [
-  {
-    id: 0,
-    name: "Google",
-    link: "https://www.google.com/",
-    logo: "/icons/google.svg",
-  },
-  {
-    id: 1,
-    name: "Instagram",
-    link: "https://www.instagram.com/",
-    logo: "/icons/instagram.svg",
-  },
-  {
-    id: 2,
-    name: "Twitter",
-    link: "https://twitter.com/",
-    logo: "/icons/twitter.svg",
-  },
-  {
-    id: 3,
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/",
-    logo: "/icons/linkedin.svg",
-  },
-];
 
 export default function Footer() {
   return (
@@ -42,23 +13,8 @@ export default function Footer() {
 
           <div className="flex flex-row gap-3">
             <a
-              href="#"
-              className="flex items-center justify-center p-2 bg-[#E8E6ED] rounded-full hover:bg-primary-200 fill-black-100 hover:fill-white ease-in-out duration-300"
-            >
-              <svg
-                width="16"
-                height="17"
-                viewBox="0 0 16 17"
-                xmlns="http://www.w3.org/2000/svg"
-                className="min-h-[18px] min-w-[18px]"
-              >
-                <path d="M15.958 8.521C15.958 12.9585 12.9268 16.0835 8.45801 16.0835C4.14551 16.0835 0.708008 12.646 0.708008 8.3335C0.708008 4.05225 4.14551 0.583496 8.45801 0.583496C10.5205 0.583496 12.3018 1.36475 13.6455 2.61475L11.5205 4.646C8.77051 1.98975 3.64551 3.98975 3.64551 8.3335C3.64551 11.0522 5.80176 13.2397 8.45801 13.2397C11.5205 13.2397 12.6768 11.0522 12.833 9.896H8.45801V7.23975H15.833C15.8955 7.646 15.958 8.021 15.958 8.521Z" />
-              </svg>
-            </a>
-
-            <a
-              href="#"
-              className="flex items-center justify-center p-2 bg-[#E8E6ED] rounded-full hover:bg-primary-200 fill-black-100 hover:fill-white ease-in-out duration-300"
+              href="https://instagram.com/stdoctor_?igshid=NjIwNzIyMDk2Mg=="
+              className="flex items-center justify-center p-2 bg-[#E8E6ED] rounded-full h-[46px] w-[46px] hover:bg-primary-200 fill-black-100 hover:fill-white ease-in-out duration-300"
             >
               <svg
                 width="15"
@@ -72,32 +28,28 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
-              className="flex items-center justify-center p-2 bg-[#E8E6ED] rounded-full hover:bg-primary-200 fill-black-100 hover:fill-white ease-in-out duration-300"
+              href="https://wa.me/558197515199"
+              className="flex items-center stroke-primary-100 justify-center p-2 bg-[#E8E6ED] rounded-full h-[46px] w-[46px] hover:bg-primary-200 hover:stroke-white ease-in-out duration-300"
             >
               <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
                 xmlns="http://www.w3.org/2000/svg"
-                className="min-h-[18px] min-w-[18px]"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <path d="M13.3335 0.333496C13.8647 0.333496 14.3335 0.802246 14.3335 1.36475V13.3335C14.3335 13.896 13.8647 14.3335 13.3335 14.3335H1.30225C0.770996 14.3335 0.333496 13.896 0.333496 13.3335V1.36475C0.333496 0.802246 0.770996 0.333496 1.30225 0.333496H13.3335ZM4.55225 12.3335V5.67725H2.48975V12.3335H4.55225ZM3.521 4.73975C4.17725 4.73975 4.7085 4.2085 4.7085 3.55225C4.7085 2.896 4.17725 2.3335 3.521 2.3335C2.8335 2.3335 2.30225 2.896 2.30225 3.55225C2.30225 4.2085 2.8335 4.73975 3.521 4.73975ZM12.3335 12.3335V8.67725C12.3335 6.896 11.9272 5.48975 9.8335 5.48975C8.8335 5.48975 8.146 6.05225 7.86475 6.5835H7.8335V5.67725H5.86475V12.3335H7.92725V9.05225C7.92725 8.17725 8.0835 7.3335 9.17725 7.3335C10.2397 7.3335 10.2397 8.3335 10.2397 9.0835V12.3335H12.3335Z" />
-              </svg>
-            </a>
-
-            <a
-              href="#"
-              className="flex items-center justify-center p-2 bg-[#E8E6ED] rounded-full hover:bg-primary-200 fill-black-100 hover:fill-white ease-in-out duration-300"
-            >
-              <svg
-                width="17"
-                height="14"
-                viewBox="0 0 17 14"
-                xmlns="http://www.w3.org/2000/svg"
-                className="min-h-[18px] min-w-[18px]"
-              >
-                <path d="M14.6772 4.0835C14.6772 4.23975 14.6772 4.36475 14.6772 4.521C14.6772 8.86475 11.396 13.8335 5.36475 13.8335C3.48975 13.8335 1.771 13.3022 0.333496 12.3647C0.583496 12.396 0.833496 12.4272 1.11475 12.4272C2.646 12.4272 4.05225 11.896 5.17725 11.021C3.73975 10.9897 2.521 10.0522 2.11475 8.73975C2.3335 8.771 2.521 8.80225 2.73975 8.80225C3.021 8.80225 3.3335 8.73975 3.5835 8.67725C2.0835 8.36475 0.958496 7.05225 0.958496 5.4585V5.42725C1.396 5.67725 1.92725 5.80225 2.4585 5.8335C1.55225 5.23975 0.989746 4.23975 0.989746 3.11475C0.989746 2.48975 1.146 1.92725 1.42725 1.4585C3.05225 3.42725 5.48975 4.73975 8.2085 4.896C8.146 4.646 8.11475 4.396 8.11475 4.146C8.11475 2.3335 9.5835 0.864746 11.396 0.864746C12.3335 0.864746 13.1772 1.23975 13.8022 1.896C14.521 1.73975 15.2397 1.4585 15.8647 1.0835C15.6147 1.86475 15.1147 2.48975 14.4272 2.896C15.0835 2.8335 15.7397 2.646 16.3022 2.396C15.8647 3.05225 15.3022 3.61475 14.6772 4.0835Z" />
+                <path
+                  d="M6.9 20.6c1.5.9 3.3 1.4 5.1 1.4 5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5l-.86 3.306a1 1 0 0 0 1.243 1.213L6.9 20.6Z"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M16.5 14.848c0 .162-.036.329-.113.491a1.856 1.856 0 0 1-.306.459c-.221.243-.464.418-.74.531-.27.113-.563.171-.878.171-.46 0-.951-.108-1.47-.328a7.922 7.922 0 0 1-1.55-.892 12.95 12.95 0 0 1-1.478-1.26 12.79 12.79 0 0 1-1.257-1.471 8.02 8.02 0 0 1-.884-1.534C7.608 10.5 7.5 10.01 7.5 9.543c0-.306.054-.598.162-.868.108-.275.28-.527.519-.752.288-.284.603-.423.937-.423.126 0 .252.027.365.081.117.054.22.135.302.252l1.046 1.472c.08.112.14.216.18.315.04.094.063.189.063.274a.61.61 0 0 1-.095.32 1.53 1.53 0 0 1-.252.319l-.343.356a.24.24 0 0 0-.072.18c0 .035.005.067.014.103.013.036.027.063.036.09.08.149.22.342.419.576.203.234.419.473.653.711.244.239.478.459.717.662.234.197.428.332.581.413l.082.037a.311.311 0 0 0 .112.018.248.248 0 0 0 .185-.077l.342-.338c.113-.112.221-.197.325-.252a.6.6 0 0 1 .32-.094.72.72 0 0 1 .275.059c.099.04.203.098.315.175l1.492 1.058a.683.683 0 0 1 .248.287.921.921 0 0 1 .072.351Z"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                ></path>
               </svg>
             </a>
           </div>

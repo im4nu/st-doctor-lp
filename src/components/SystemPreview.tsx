@@ -17,7 +17,6 @@ const bgVariants = {
     translateX: 0,
     transition: {
       type: "spring",
-      bounce: 0.4,
       duration: 0.8,
     },
   },

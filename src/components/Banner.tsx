@@ -22,7 +22,10 @@ export default function Banner() {
         nullam vitae laoreet.{" "}
       </p>
 
-      <ContainedLink title="Quero testar gratuitamente" />
+      <ContainedLink
+        link="https://wa.me/558197515199"
+        title="Quero testar gratuitamente"
+      />
 
       <div className="flex w-full items-start px-2">
         <Image

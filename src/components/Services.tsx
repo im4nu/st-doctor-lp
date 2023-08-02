@@ -1,45 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  DocumentText1,
-  Mobile,
-  MonitorMobbile,
-  ReceiptItem,
-} from "iconsax-react";
+import { ArrowRight } from "iconsax-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
+import { ServicesData } from "~/utils/serviceData";
 
-const ServicesData = [
-  {
-    id: 0,
-    icon: <Mobile variant="TwoTone" size={32} />,
-    title: "Prescrição Digital",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
-  },
-  {
-    id: 1,
-    icon: <ReceiptItem variant="TwoTone" size={32} />,
-    title: "Emissão de Nota Fiscal",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
-  },
-  {
-    id: 2,
-    icon: <DocumentText1 variant="TwoTone" size={32} />,
-    title: "Formulários Dinâmicos",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
-  },
-  {
-    id: 3,
-    icon: <MonitorMobbile variant="TwoTone" size={32} />,
-    title: "Aplicativo",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare tellus malesuada odio blandit. Sit duis eu nisi habitant lorem egestas.",
-  },
-];
+const data = ServicesData.slice(0, 4);
 
 export default function ServicesSection() {
   const scrollRef = useRef(null);
@@ -83,7 +51,7 @@ export default function ServicesSection() {
           </p>
 
           <div className="flex flex-col gap-12 pl-8 lg:flex-row lg:flex-wrap lg:p-0 lg:gap-0">
-            {ServicesData.map((item) => (
+            {data.map((item) => (
               <motion.div
                 initial="offscreen"
                 whileInView="onscreen"
@@ -93,7 +61,7 @@ export default function ServicesSection() {
                 ref={scrollRef}
               >
                 <motion.div className="card" variants={cardVariants}>
-                  <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[70px] h-[70px] items-center justify-center rounded-lg">
+                  <div className="flex bg-gradient-to-tr from-primary-100 to-primary-200 text-white-200 w-[60px] h-[60px] items-center justify-center rounded-lg">
                     {item.icon}
                   </div>
                 </motion.div>
@@ -102,6 +70,16 @@ export default function ServicesSection() {
                 <p className="text-sm text-start">{item.description}</p>
               </motion.div>
             ))}
+          </div>
+
+          <div className="flex w-full flex-row justify-end gap-3">
+            <Link
+              href={"/services"}
+              className="underline text-primary-100 text-sm hover:translate-x-2 ease-linear duration-300"
+            >
+              Ver todos os serviços
+            </Link>
+            <ArrowRight size={24} />
           </div>
         </div>
 

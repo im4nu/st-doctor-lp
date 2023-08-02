@@ -39,7 +39,7 @@ export default function Home() {
       <Footer />
       <div className="flex flex-col items-center gap-3 right-4 bottom-4 fixed">
         <a
-          href="#home"
+          href="https://wa.me/558197515199"
           className="flex rounded-full p-4 bg-green-700 text-[#E8E6ED] ease-in-out duration-300"
         >
           <Whatsapp />

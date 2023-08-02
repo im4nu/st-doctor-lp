@@ -2,8 +2,9 @@
 
 import { CloseCircle, HambergerMenu } from "iconsax-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ContainedLink } from "./Link";
+import Link from "next/link";
 
 const NavigationMenuData = [
   { id: 0, label: "Início", link: "#home" },
@@ -58,11 +59,14 @@ export default function Navbar({ isScrollAtTop }: NavigationMenuProps) {
               <a href={item.link}>{item.label}</a>
             </li>
           ))}
-          <ContainedLink link={"#"} title="Testar" />
+          <ContainedLink link={"https://wa.me/558197515199"} title="Testar" />
 
-          <button className="flex items-center rounded-3xl w-fit px-12 justify-center border border-black-100 py-3 hover:scale-95 ease-in-out duration-300 hover:bg-[#63618310]">
+          <Link
+            href={"https://sys.stdoctor.com.br/"}
+            className="flex items-center rounded-3xl w-fit px-12 justify-center border border-black-100 py-3 hover:scale-95 ease-in-out duration-300 hover:bg-[#63618310]"
+          >
             Login
-          </button>
+          </Link>
         </ul>
       </div>
 
