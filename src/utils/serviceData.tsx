@@ -88,6 +88,6 @@ export const ServicesData = [
     icon: <MirroringScreen variant="TwoTone" size={32} />,
     title: "Telemedicina",
     description:
-      "Ofereça consultas remotas de qualidade. Amplie seu alcance, mantenha o cuidado à distância e proporcione comodidade aos pacientes com a telemedicina.",
+      "Ofereça consultas remotas ilimitadas de qualidade. Amplie seu alcance, mantenha o cuidado à distância e proporcione comodidade aos pacientes com a telemedicina. Acesse os prontuários durante as consultas online.",
   },
 ];
