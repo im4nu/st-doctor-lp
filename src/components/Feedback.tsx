@@ -30,7 +30,7 @@ export const feedbackData = [
     clinic: "Interne Prime",
     link: "#",
     atuationArea: "Interne Prime",
-    image: "/images/feedbackCarousel/interne-prime.jpeg",
+    image: "/images/feedbackCarousel/interne-prime.png",
     feedback: `Gostaria de parabenizar a todos que fazem parte da equipe StDoctor, pelo atendimento de excelência em todas as etapas do nosso processo. Com plataforma flexível e adequada a cada cliente conseguem demonstrar exclusividade em cada atendimento e olhar diferenciado para necessidade do que o cliente entende como valor.`,
   },
   {
@@ -131,7 +131,7 @@ export default function FeedbackSection() {
                     width={190}
                     height={190}
                     quality={100}
-                    className="flex max-w-[190px] max-h-[190px] rounded-full object-cover lg:-mr-24 lg:-mt-16 -mt-8"
+                    className="flex max-w-[190px] min-w-[190px] max-h-[190px] min-h-[190px] rounded-full object-cover lg:-mr-8 -mt-8"
                   />
                 </div>
 
