@@ -30,7 +30,7 @@ export const feedbackData = [
     clinic: "Interne Prime",
     link: "#",
     atuationArea: "Interne Prime",
-    image: "/images/feedbackCarousel/dra-luciana.png",
+    image: "/images/feedbackCarousel/interne-prime.jpeg",
     feedback: `Gostaria de parabenizar a todos que fazem parte da equipe StDoctor, pelo atendimento de excelência em todas as etapas do nosso processo. Com plataforma flexível e adequada a cada cliente conseguem demonstrar exclusividade em cada atendimento e olhar diferenciado para necessidade do que o cliente entende como valor.`,
   },
   {
@@ -40,7 +40,7 @@ export const feedbackData = [
     link: "#",
     atuationArea: "Oftalmologista",
     image: "/images/feedbackCarousel/dr-rilcon-coelho.png",
-    feedback: `Sou oftalmologista, uso o StDoctor desde 2017 na clínica,  ajuda bastante com o prontuário eletrônico personalizado online (configurado para exame oftalmológico, medicações, laudos, prescrição de lentes, etc) e o suporte é bastante ativo e eficiente. Também tenho acesso pelo celular a minha agenda.`,
+    feedback: `É com grande satisfação que expresso minha admiração pelo excepcional programa de prontuário eletrônico STDoctor. Como oftalmologista, reconheço a importância de ferramentas eficientes na gestão de informações médicas e no atendimento aos pacientes. O STDoctor não apenas simplifica o registro de dados clínicos, mas também proporciona uma interface amigável e intuitiva, otimizando o fluxo de trabalho no consultório. Sua abordagem abrangente e recursos personalizáveis demonstram um compromisso genuíno com a excelência na assistência médica. Parabenizo a equipe por criar um sistema tão notável e benéfico para a comunidade médica.`,
   },
 ];
 
