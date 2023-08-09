@@ -9,7 +9,6 @@ export default function LGPDBanner() {
   }
   return (
     <div
-      id="banner"
       className={`${
         accepted ? "opacity-0 h-0" : "opacity-100 h-[200px] lg:h-[150px]"
       } flex flex-col justify-center bg-primary-100 items-center py-4 text-white-200 px-4 gap-4 ease-linear duration-300 lg:w-full lg:flex-row lg:justify-around lg:py-12 lg:text-base`}

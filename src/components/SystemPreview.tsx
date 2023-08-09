@@ -58,9 +58,9 @@ function Image({ id }: { id: number }) {
           <span className="rounded-full flex p-1 bg-white-200 lg:p-2" />
           {id === 1 ? "Dashboard" : ""}
           {id === 2 ? "Agendamento" : ""}
-          {id === 3 ? "Faturamento" : ""}
+          {id === 3 ? "Recepção" : ""}
           {id === 4 ? "Prontuário" : ""}
-          {id === 5 ? "Recepção" : ""}
+          {id === 5 ? "Faturamento" : ""}
         </p>
       </motion.h2>
     </section>

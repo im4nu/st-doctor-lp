@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import Modal from "./Modal";
-import { ContainedLink } from "./Link";
 
 export default function Banner() {
   const [modalVisibility, setModalVisibility] = useState(false);
@@ -10,7 +9,10 @@ export default function Banner() {
   }
   return (
     <>
-      <section className="flex flex-col bg-white rounded-xl items-center text-center gap-6 py-20 max-w-xl px-6 lg:max-w-none lg:w-[80%] my-12 lg:my-20">
+      <section
+        id="banner"
+        className="flex flex-col bg-white rounded-xl items-center text-center gap-6 py-20 max-w-xl px-6 lg:max-w-none lg:w-[80%] mb-12 lg:my-20"
+      >
         <div className="flex flex-col font-semibold gap-3">
           <p>Tá esperando o que?</p>
 

@@ -80,7 +80,7 @@ export default function FeedbackSection() {
           <h2 className="text-5xl font-bold StDoctorSpan">
             Confira alguns depoimentos
           </h2>
-          <p>
+          <p className="z-20">
             Alguns dos nossos clientes estão aqui pra contar a experiência deles
             com o nosso sistema{" "}
           </p>
@@ -99,7 +99,7 @@ export default function FeedbackSection() {
               transition={{ duration: 0.2 }}
             >
               <p>{feedbackDataPosition.atuationArea}</p>
-              <h3 className="text-4xl font-semibold w-3/4">
+              <h3 className="flex text-4xl font-semibold w-3/4 z-10">
                 {feedbackDataPosition.clinic ?? feedbackDataPosition.doctor}
               </h3>
             </motion.div>
@@ -119,14 +119,14 @@ export default function FeedbackSection() {
               transition={{ duration: 0.2 }}
             >
               <div className="flex flex-col lg:flex-row-reverse items-center lg:items-start justify-between w-full">
-                <div className="flex items-center min-w-[180px] min-h-[180px] rounded-full bg-white-200 lg:-mr-12 lg:-mt-8 -mt-8">
+                <div className="flex items-center w-fit h-fit px-2 py-4 rounded-full bg-white-200 lg:-mr-8 lg:-mt-8 -mt-24">
                   <Image
                     src={feedbackDataPosition.image}
                     alt="Responsável pelo comentário"
                     width={190}
                     height={190}
                     quality={100}
-                    className="flex max-w-[190px] min-w-[190px] max-h-[190px] min-h-[190px] rounded-full object-cover lg:-mr-8 -mt-8"
+                    className="flex min-w-[190px] h-[190px] rounded-full object-cover lg:-mr-2 lg:-mt-8"
                   />
                 </div>
 
@@ -142,7 +142,7 @@ export default function FeedbackSection() {
           </AnimatePresence>
         </div>
 
-        <div className="flex flex-row w-3/4 max-w-sm items-center justify-evenly">
+        <div className="flex flex-row w-3/5 max-w-sm items-center justify-evenly">
           <button
             onClick={HandlePreviousCard}
             className="flex min-h-[18px] min-w-[18px] rounded-full p-3 GradientButton"
@@ -154,8 +154,8 @@ export default function FeedbackSection() {
             <div
               key={item.id}
               className={`${
-                step === index ? "bg-primary-100" : ""
-              } flex rounded-full p-1 border border-primary-100 ease-linear duration-500`}
+                step === index ? "bg-primary-100" : "bg-white-300"
+              } flex h-[2px] lg:h-[3px] w-3 rounded ease-linear duration-500`}
             />
           ))}
 

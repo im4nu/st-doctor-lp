@@ -36,17 +36,17 @@ export const ServicesData = [
   },
   {
     id: 3,
-    icon: <DocumentText1 variant="TwoTone" size={32} />,
-    title: "Prescrição Digital",
-    description:
-      "Modernize suas prescrições médicas. Ofereça tratamentos avançados com prescrições digitais precisas e integradas ao histórico do paciente.",
-  },
-  {
-    id: 4,
     icon: <WalletMoney variant="TwoTone" size={32} />,
     title: "Faturamento TISS",
     description:
       "Simplifique a parte financeira da sua clínica. Lidamos com o faturamento TISS, garantindo conformidade e permitindo que você foque na saúde dos pacientes.",
+  },
+  {
+    id: 4,
+    icon: <DocumentText1 variant="TwoTone" size={32} />,
+    title: "Prescrição Digital",
+    description:
+      "Modernize suas prescrições médicas. Ofereça tratamentos avançados com prescrições digitais precisas e integradas ao histórico do paciente.",
   },
   {
     id: 5,
