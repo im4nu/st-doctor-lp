@@ -57,8 +57,10 @@ function Image({ id }: { id: number }) {
         <p className="flex flex-row items-center pl-4 lg:pl-8 gap-2 lg:gap-4">
           <span className="rounded-full flex p-1 bg-white-200 lg:p-2" />
           {id === 1 ? "Dashboard" : ""}
-          {id === 2 ? "Cadastro" : ""}
-          {id === 3 ? "Agenda" : ""}
+          {id === 2 ? "Agendamento" : ""}
+          {id === 3 ? "Faturamento" : ""}
+          {id === 4 ? "Prontuário" : ""}
+          {id === 5 ? "Recepção" : ""}
         </p>
       </motion.h2>
     </section>
@@ -68,7 +70,7 @@ function Image({ id }: { id: number }) {
 export default function App() {
   return (
     <>
-      {[1, 2, 3].map((image) => (
+      {[1, 2, 3, 4, 5].map((image) => (
         <Image id={image} />
       ))}
     </>

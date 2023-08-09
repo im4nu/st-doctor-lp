@@ -106,11 +106,6 @@ export default function FeedbackSection() {
           </AnimatePresence>
           <p>Saber mais</p>
         </a>
-
-        {/* <ContainedLink
-          link={feedbackDataPosition.link}
-          title="Ver todos depoimentos"
-        /> */}
       </div>
 
       <div className="flex flex-col lg:w-1/2 items-center justify-center gap-12">
@@ -140,7 +135,7 @@ export default function FeedbackSection() {
                 </h3>
               </div>
 
-              <p className="text-center font-bold text-sm lg:p-8 px-5 py-4">
+              <p className="text-center font-bold text-xs lg:text-sm lg:p-8 px-5 py-4">
                 {feedbackDataPosition.feedback}
               </p>
             </motion.div>
