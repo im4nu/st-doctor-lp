@@ -119,7 +119,7 @@ export default function FeedbackSection() {
               transition={{ duration: 0.2 }}
             >
               <div className="flex flex-col lg:flex-row-reverse items-center lg:items-start justify-between w-full">
-                <div className="flex items-center w-fit h-fit px-2 py-4 rounded-full bg-white-200 lg:-mr-8 lg:-mt-8 -mt-24">
+                <div className="flex items-center w-fit h-fit px-2 py-4 rounded-full bg-white-200 lg:-mr-8 lg:-mt-8 -mt-12">
                   <Image
                     src={feedbackDataPosition.image}
                     alt="Responsável pelo comentário"
