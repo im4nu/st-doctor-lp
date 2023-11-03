@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { feedbackData } from "./Feedback";
 
 export default function Footer() {
   return (
@@ -29,7 +28,9 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://wa.me/558197515199"
+              href={`http://wa.me/558197515199?text=${encodeURIComponent(
+                `Olá! Venho do site do StDoctor e gostaria de fazer um orçamento e entender melhor esse produto!`
+              )}`}
               className="flex items-center stroke-primary-100 justify-center p-2 bg-[#E8E6ED] rounded-full h-[46px] w-[46px] hover:bg-primary-200 hover:stroke-white ease-in-out duration-300"
             >
               <svg

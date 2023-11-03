@@ -59,7 +59,12 @@ export default function Navbar({ isScrollAtTop }: NavigationMenuProps) {
               <a href={item.link}>{item.label}</a>
             </li>
           ))}
-          <ContainedLink link={"https://wa.me/558197515199"} title="Testar" />
+          <ContainedLink
+            link={`http://wa.me/558197515199?text=${encodeURIComponent(
+              `Olá! Venho do site do StDoctor e gostaria de fazer um orçamento e entender melhor esse produto!`
+            )}`}
+            title="Testar"
+          />
 
           <Link
             href={"https://sys.stdoctor.com.br/"}
