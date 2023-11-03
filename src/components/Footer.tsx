@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-start text-start gap-3 w-full lg:w-1/6">
+        {/* <div className="flex flex-col items-start text-start gap-3 w-full lg:w-1/6">
           <h4 className="font-bold text-lg">Clínicas em Destaque</h4>
           {feedbackData.map((item) => (
             <a
@@ -80,7 +80,7 @@ export default function Footer() {
               {item.doctor}
             </a>
           ))}
-        </div>
+        </div> */}
 
         <div className="flex flex-col items-center lg:items-start text-start gap-3 w-full lg:w-1/6">
           <a href="https://www.starttec.com.br/">
@@ -95,7 +95,10 @@ export default function Footer() {
       </div>
 
       <p className="font-bold text-center text-sm">
-        Copyright St Doctor © 2023
+        Copyright St Doctor © 2023 - Design por:{" "}
+        <a className="underline" href="https://www.linkedin.com/in/m4nu/">
+          Emmanuel Rodrigues
+        </a>
       </p>
     </footer>
   );

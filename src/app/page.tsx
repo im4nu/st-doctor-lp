@@ -29,7 +29,8 @@ export default function Home() {
       <Navbar isScrollAtTop={isScrollAtTop} />
       <HeroSection />
       <LGPDBanner />
-      <Carousel />
+      {/* <Carousel /> */}
+      <div className="flex py-10" />
       <ServicesSection />
       <div className="bg-systemPreview bg-no-repeat bg-cover">
         <SystemPreviewSection />

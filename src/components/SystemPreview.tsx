@@ -39,13 +39,13 @@ function Image({ id }: { id: number }) {
             <img
               src={`/images/systemPreview/desktop${id}.png`}
               alt="Imagem do sistema"
-              className="absolute w-screen h-screen object-cover lg:flex hidden"
+              className="absolute w-screen h-screen object-cover lg:flex hidden animate-bounce"
             />
 
             <img
               src={`/images/systemPreview/mobile${id}.png`}
               alt="Imagem do sistema"
-              className="absolute w-screen h-screen object-cover flex lg:hidden"
+              className="absolute ml-[5vw] w-[90vw] h-[90vh] object-cover flex lg:hidden animate-bounce"
             />
           </motion.div>
         </div>
