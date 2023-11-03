@@ -54,8 +54,8 @@ function Image({ id }: { id: number }) {
         className="absolute left-0 text-white-200 text-2xl lg:text-4xl font-bold"
         style={{ y }}
       >
-        <p className="lg:flex flex-row items-center pl-4 lg:pl-8 gap-2 lg:gap-4 hidden">
-          <span className="rounded-full flex p-1 bg-white-200 lg:p-2" />
+        <p className="lg:flex flex-row items-center text-white-200 pl-4 lg:pl-8 gap-2 lg:gap-4 hidden bg-primary-100 rounded-l-0 rounded-r-3xl px-8 py-5">
+          <span className="flex p-1 text-white-200 lg:p-2 bg-white-200 rounded-full" />
           {id === 1 ? "Dashboard" : ""}
           {id === 2 ? "Agendamento" : ""}
           {id === 3 ? "Recepção" : ""}
