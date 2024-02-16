@@ -27,21 +27,30 @@ export default function Home() {
   return (
     <main className="flex h-full w-screen flex-col items-center justify-between bg-white-200 font-medium text-black-100">
       <Navbar isScrollAtTop={isScrollAtTop} />
+
       <HeroSection />
+
       <LGPDBanner />
+
       {/* <Carousel /> */}
       <div className="flex py-10" />
+
       <ServicesSection />
+
       <div className="bg-systemPreview bg-no-repeat bg-cover">
         <SystemPreviewSection />
       </div>
+
       <FeedbackSection />
+
       <Banner />
+
       <Footer />
+
       <div className="flex flex-col items-center gap-3 right-4 bottom-4 fixed">
         <a
           href={`http://wa.me/558197515199?text=${encodeURIComponent(
-            `Olá! Venho do site do StDoctor e gostaria de fazer um orçamento e entender melhor esse produto!`
+            `Olá! Venho do site do StDoctor e gostaria de fazer um orçamento e entender melhor o produto!`
           )}`}
           className="flex rounded-full p-4 bg-green-700 text-[#E8E6ED] ease-in-out duration-300"
         >

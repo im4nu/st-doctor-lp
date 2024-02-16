@@ -4,9 +4,9 @@ import Modal from "./Modal";
 
 export default function Banner() {
   const [modalVisibility, setModalVisibility] = useState(false);
-  function toggleModal() {
-    setModalVisibility((current) => !current);
-  }
+  // function toggleModal() {
+  //   setModalVisibility((current) => !current);
+  // }
   return (
     <>
       <section
@@ -32,12 +32,16 @@ export default function Banner() {
           e desfrute de todas as funcionalidades que o St Doctor tem a oferecer.
         </p>
 
-        <button
-          onClick={toggleModal}
+        <a
+          // onClick={}
+          href={`http://wa.me/558197515199?text=${encodeURIComponent(
+            `Olá! Venho do site do StDoctor e gostaria de realizar um teste gratuito da plataforma!`
+          )}`}
+          target="_blank"
           className="flex items-center rounded-3xl w-fit px-12 justify-center GradientButton py-3 text-white-200 hover:scale-95 hover:cursor-pointer ease-in-out duration-300"
         >
           Quero testar gratuitamente
-        </button>
+        </a>
 
         <div className="flex w-full items-start px-2">
           <Image
@@ -50,7 +54,7 @@ export default function Banner() {
         </div>
       </section>
 
-      <Modal modalVisibility={modalVisibility} toggle={toggleModal}>
+      {/* <Modal modalVisibility={modalVisibility} toggle={toggleModal}>
         <h2 className="text-xl">Qual o seu dispositivo?</h2>
         <p className="text-sm text-center">
           Escolha dentre os dispositivos qual você está acessando agora e vai
@@ -83,7 +87,7 @@ export default function Banner() {
         >
           Notebook ou Desktop
         </a>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

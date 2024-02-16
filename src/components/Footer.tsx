@@ -96,7 +96,7 @@ export default function Footer() {
       </div>
 
       <p className="font-bold text-center text-sm">
-        Copyright St Doctor © 2023 - Design por:{" "}
+        Copyright St Doctor © 2024 - Design por:{" "}
         <a className="underline" href="https://www.omanu.tech/">
           Emmanuel Rodrigues
         </a>

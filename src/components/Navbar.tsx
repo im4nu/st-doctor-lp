@@ -68,6 +68,7 @@ export default function Navbar({ isScrollAtTop }: NavigationMenuProps) {
 
           <Link
             href={"https://sys.stdoctor.com.br/"}
+            target="_blank"
             className="flex items-center rounded-3xl w-fit px-12 justify-center border border-black-100 py-3 hover:scale-95 ease-in-out duration-300 hover:bg-[#63618310]"
           >
             Login
