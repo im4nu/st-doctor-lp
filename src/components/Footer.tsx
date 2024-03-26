@@ -96,7 +96,14 @@ export default function Footer() {
       </div>
 
       <p className="font-bold text-center text-sm">
-        Copyright St Doctor © 2024 - Design por:{" "}
+        Copyright St Doctor © 2024 - Desenvolvido por:{" "}
+        <a
+          className="underline"
+          href="https://www.instagram.com/starttecsolucoes/"
+        >
+          Starttec Soluções
+        </a>
+        {""} | Design por:{" "}
         <a className="underline" href="https://www.omanu.tech/">
           Emmanuel Rodrigues
         </a>
